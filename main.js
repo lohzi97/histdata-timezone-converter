@@ -4,14 +4,13 @@ import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import moment from 'moment';
 
-// import config
-import CONFIG from './config.js';
-const INITIAL_FILE = CONFIG().initialFile;
-const INITIAL_TIMEZONE = CONFIG().initialTimezone;
-const FINAL_FILE = CONFIG().finalFile;
-const FINAL_TIMEZONE = CONFIG().finalTimezone;
+async function main(argv) {
 
-async function main() {
+  const INITIAL_FILE = argv.initialFile;
+  const INITIAL_TIMEZONE = argv.initialTimezone;
+  const FINAL_FILE = argv.finalFile;
+  const FINAL_TIMEZONE = argv.finalTimezone;
+
   console.log('Start of Programe.');
 
   // read csv file

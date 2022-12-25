@@ -1,2 +1,4 @@
 import main from './main.js';
-main();
+import argv from './argv.js';
+const ARGV = argv();
+main(ARGV);
